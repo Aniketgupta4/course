@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Floating bubbles animation */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: floatBubble 8s infinite ease-in-out;
+        }
+
+        /* White Bubble */
+        .white-bubble {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Golden Bubble */
+        .golden-bubble {
+            background-color: rgba(255, 223, 0, 0.7);
+        }
+
+        @keyframes floatBubble {
+            0% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateY(-200px) translateX(50px);
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+        }
+
+        /* Gradient animation for background */
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animated-background {
+            background: linear-gradient(45deg, #1b2a49, #3b4e70, #1b2a49, #2d3c58);
+            background-size: 400% 400%;
+            animation: gradient-animation 10s ease infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white animated-background relative">
+
+    <!-- Logout button at the top-right corner -->
+    <div class="fixed right-0 top-4 flex flex-row space-x-4">
+        <!-- Logout Button -->
+        <a href="/logout" class="px-5 py-3 bg-transparent border-2 border-white text-white mr-4 text-lg rounded-md hover:bg-white hover:text-blue-900 transition duration-300">Logout</a>
+        <!-- Home Button -->
+        <a href="/front" class="px-5 py-3 bg-transparent mr-4 border-2 border-white text-white mr-4 text-lg rounded-md hover:bg-white hover:text-blue-900 transition duration-300">Home</a>
+    </div>
+    
+    
+    
+    
+
+    <!-- Floating Bubbles in Background -->
+    <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+        <div class="bubble white-bubble" style="width: 15px; height: 15px; top: 10%; left: 20%; animation-duration: 8s;"></div>
+        <div class="bubble white-bubble" style="width: 12px; height: 12px; top: 30%; left: 40%; animation-duration: 7s;"></div>
+        <div class="bubble white-bubble" style="width: 10px; height: 10px; top: 50%; left: 60%; animation-duration: 6s;"></div>
+        <div class="bubble golden-bubble" style="width: 20px; height: 20px; top: 70%; left: 80%; animation-duration: 9s;"></div>
+        <div class="bubble golden-bubble" style="width: 14px; height: 14px; top: 20%; left: 70%; animation-duration: 5s;"></div>
+    </div>
+
+    <!-- Centering the card -->
+    <div class="flex items-center justify-center h-screen w-full z-10">
+        <!-- Card container -->
+        <div class="w-full max-w-sm p-8 bg-gray-800 rounded-lg shadow-lg">
+            <!-- Image above the button -->
+            <img src="/images/Black Modern and Simple Technology YouTube Channel Logo.png" alt="PDF Image" class="w-full h-full object-cover rounded-md mb-4">
+
+            <!-- Button that opens the PDF -->
+            <a href="/images/All courses.pdf" target="_blank" class="block text-center px-5 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300">
+                FREE COURSES
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

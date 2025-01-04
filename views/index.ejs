@@ -1,0 +1,311 @@
+<!-- <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+
+    
+     <div class="text-white p-10 w-full h-screen bg-zinc-900">
+        <h1 class="text-3xl text-gray-500 mb-4 font-semibold">Create User</h1>
+        <form method="post" action="/create">
+           <input class="px-3 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700" type="text" placeholder="username" name="username">
+           <input class="px-3 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700" type="email" placeholder="email" name="email">
+           <input class="px-3 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700" type="password" placeholder="password" name="password">
+           <input class="px-3 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700" type="number" placeholder="age" name="age">
+           <input class="px-5 py-2 rounded-md bg-blue-500" type="submit" value="Create">
+        </form>
+     </div>
+
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900">
+
+    <div class="flex items-center justify-center h-screen text-white">
+        <div class="p-10 w-full max-w-lg bg-zinc-800 rounded-lg shadow-lg">
+            <h1 class="text-3xl text-gray-500 mb-4 font-semibold text-center">Create User</h1>
+
+            
+
+            <form method="post" action="/create">
+                <input class="w-full px-3 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700 text-white" type="text" placeholder="Username" name="username">
+                <input class="w-full px-3 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700 text-white" type="email" placeholder="Email" name="email">
+                <input class="w-full px-3 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700 text-white" type="password" placeholder="Password" name="password">
+                <input class="w-full px-3 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700 text-white" type="number" placeholder="Age" name="age">
+                <input class="w-full mb-4 px-5 py-2 rounded-md bg-blue-500 text-white" type="submit" value="Create">
+            </form>
+            
+            <a href="/login" class="w-full px-5 py-2 rounded-md bg-blue-500 text-white flex items-center justify-center">Login</a>
+        
+        </div>
+    </div>
+
+</body>
+</html> --> 
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Gradient animation for background */
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animated-background {
+            background: linear-gradient(45deg, #1b2a49, #3b4e70, #1b2a49, #2d3c58);
+            background-size: 400% 400%;
+            animation: gradient-animation 10s ease infinite;
+        }
+
+        /* Floating bubbles animation */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: floatBubble 8s infinite ease-in-out;
+        }
+
+        /* White Bubble */
+        .white-bubble {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Golden Bubble */
+        .golden-bubble {
+            background-color: rgba(255, 223, 0, 0.7);
+        }
+
+        @keyframes floatBubble {
+            0% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateY(-200px) translateX(50px);
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+        }
+    </style>
+</head>
+<body class="bg-zinc-900 animated-background min-h-screen relative flex items-center justify-center text-white">
+
+     Floating Bubbles in Background 
+    <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+        <div class="bubble white-bubble" style="width: 15px; height: 15px; top: 10%; left: 20%; animation-duration: 8s;"></div>
+        <div class="bubble white-bubble" style="width: 12px; height: 12px; top: 30%; left: 40%; animation-duration: 7s;"></div>
+        <div class="bubble white-bubble" style="width: 10px; height: 10px; top: 50%; left: 60%; animation-duration: 6s;"></div>
+        <div class="bubble golden-bubble" style="width: 20px; height: 20px; top: 70%; left: 80%; animation-duration: 9s;"></div>
+        <div class="bubble golden-bubble" style="width: 14px; height: 14px; top: 20%; left: 70%; animation-duration: 5s;"></div>
+    </div>
+
+   
+    <div class="p-10 w-full max-w-lg bg-zinc-800 rounded-lg shadow-lg z-10">
+        <h1 class="text-3xl text-gray-500 mb-4 font-semibold text-center">Create User</h1>
+
+        <form method="post" action="/create">
+            <input class="w-full px-3 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700 text-white" type="text" placeholder="Username" name="username">
+            <input class="w-full px-3 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700 text-white" type="email" placeholder="Email" name="email">
+            <input class="w-full px-3 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700 text-white" type="password" placeholder="Password" name="password">
+            <input class="w-full px-3 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700 text-white" type="number" placeholder="Age" name="age">
+            <input class="w-full mb-4 px-5 py-2 rounded-md bg-blue-500 text-white" type="submit" value="Create">
+        </form>
+
+        <a href="/login" class="w-full px-5 py-2 rounded-md bg-blue-500 text-white flex items-center justify-center mt-4">Login</a>
+    </div>
+
+</body>
+</html>
+ -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Gradient animation for background */
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animated-background {
+            background: linear-gradient(45deg, #1b2a49, #3b4e70, #1b2a49, #2d3c58);
+            background-size: 400% 400%;
+            animation: gradient-animation 10s ease infinite;
+        }
+
+        /* Floating bubbles animation */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: floatBubble 8s infinite ease-in-out;
+        }
+
+        /* White Bubble */
+        .white-bubble {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Golden Bubble */
+        .golden-bubble {
+            background-color: rgba(255, 223, 0, 0.7);
+        }
+
+        @keyframes floatBubble {
+            0% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateY(-200px) translateX(50px);
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+        }
+
+        /* Error Message Styles */
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-zinc-900 animated-background min-h-screen relative flex items-center justify-center text-white">
+
+
+    <div class="fixed right-0 top-4 flex flex-row space-x-4">
+        <!-- Logout Button -->
+        <a href="/front" class="px-5 py-3 bg-transparent border-2 border-white text-white mr-4 text-lg rounded-md hover:bg-white hover:text-blue-900 transition duration-300">Home</a>
+    </div>    
+
+    <!-- Floating Bubbles in Background -->
+    <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+        <div class="bubble white-bubble" style="width: 15px; height: 15px; top: 10%; left: 20%; animation-duration: 8s;"></div>
+        <div class="bubble white-bubble" style="width: 12px; height: 12px; top: 30%; left: 40%; animation-duration: 7s;"></div>
+        <div class="bubble white-bubble" style="width: 10px; height: 10px; top: 50%; left: 60%; animation-duration: 6s;"></div>
+        <div class="bubble golden-bubble" style="width: 20px; height: 20px; top: 70%; left: 80%; animation-duration: 9s;"></div>
+        <div class="bubble golden-bubble" style="width: 14px; height: 14px; top: 20%; left: 70%; animation-duration: 5s;"></div>
+    </div>
+
+    <!-- Form Content -->
+    <div class="p-10 w-full max-w-lg bg-zinc-800 rounded-lg shadow-lg z-10">
+        <h1 class="text-3xl text-gray-500 mb-4 font-semibold text-center">Create User</h1>
+
+        <!-- Form to Create User -->
+        <form id="createUserForm" method="post" action="/create" onsubmit="return validateForm()">
+            <div class="space-y-4">
+                <!-- Username Input -->
+                <input class="w-full px-4 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                       type="text" placeholder="Username" name="username" id="username">
+                
+                <!-- Email Input -->
+                <input class="w-full px-4 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                       type="email" placeholder="Email" name="email" id="email">
+                
+                <!-- Password Input -->
+                <input class="w-full px-4 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                       type="password" placeholder="Password" name="password" id="password">
+                
+                <!-- Age Input -->
+                <input class="w-full px-4 py-2 rounded-md bg-transparent mb-2 border-2 border-zinc-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                       type="number" placeholder="Age" name="age" id="age">
+                
+                <!-- Error Message -->
+                <div id="error-message" class="text-red-500 text-sm hidden">All fields are required!</div>
+        
+                <!-- Submit Button -->
+                <input class="w-full mb-4 px-5 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" 
+                       type="submit" value="Create">
+            </div>
+        </form>
+        
+        <!-- Divider with OR text -->
+        <div class="flex items-center space-x-2 my-4">
+            <hr class="flex-1 border-t-2 border-zinc-600">
+            <span class="text-zinc-500">OR</span>
+            <hr class="flex-1 border-t-2 border-zinc-600">
+        </div>
+        
+        <!-- Login Button -->
+        <a href="/login" class="w-full px-5 py-2 rounded-md bg-blue-500 text-white flex items-center justify-center mt-4 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+            Login
+        </a>
+        
+        <!-- JavaScript to Validate Form -->
+        <script>
+            function validateForm() {
+                var username = document.getElementById('username').value;
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+                var age = document.getElementById('age').value;
+                var errorMessage = document.getElementById('error-message');
+        
+                // Check if all fields are filled
+                if (!username || !email || !password || !age) {
+                    errorMessage.classList.remove('hidden'); // Show error message
+                    return false; // Prevent form submission
+                } else {
+                    errorMessage.classList.add('hidden'); // Hide error message
+                    return true; // Allow form submission
+                }
+            }
+        </script>
+        
+
+</body>
+</html>
+
