@@ -65,12 +65,14 @@
 
 
 
-
+const dotenv = require('dotenv');
 const express = require('express');
 const app = express();
 const userModel = require("./models/user.js");
 const bcrypt = require('bcrypt');
 const jwt = require("jsonwebtoken");
+const mongoose = require('mongoose');
+
 
 const cookieParser = require('cookie-parser');
 const path = require('path');
@@ -79,8 +81,21 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
-app.use(cookieParser());
 
+dotenv.config({path:'./config.env'})
+
+const DB = process.env.DATABASE;
+
+mongoose.connect(DB, { 
+    useNewUrlParser: true, 
+    useUnifiedTopology: true 
+})
+.then(() => {
+    console.log("Connected to the database");
+})
+.catch((err) => {
+    console.log("Failed to connect to the database", err);
+});
 // Middleware to check if the user is authenticated
 function checkAuth(req, res, next) {
     const token = req.cookies.token;
